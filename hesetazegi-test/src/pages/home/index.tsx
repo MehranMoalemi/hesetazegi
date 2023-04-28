@@ -8,6 +8,7 @@ import {BsShare} from 'react-icons/bs'
 
 const Home = (): JSX.Element => {
 
+    //we can using isloading to show a loader i didnt do this because of lack of time sorry :(
     const { isLoading, data } = useQuery('FAQ', () => {
         return axios.get('https://api-dev.hesetazegi.com/FAQ/List')
     },
