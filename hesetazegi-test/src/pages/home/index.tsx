@@ -16,12 +16,12 @@ const Home = (): JSX.Element => {
         }
     )
 
-
+    
     return (
 
         <div className='home'>
-            {data?.data.content.items.map((item: ItemType) => (
-                <AccordionComponent key={item.id} summary={item.title} details={item.description} id={item.id} />
+            {data?.data.content.items.map((item: ItemType,index:number) => (
+                <AccordionComponent key={item.id} summary={item.title} details={item.description} id={item.id} index={index} />
             ))
             }
         </div>

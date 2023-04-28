@@ -12,11 +12,12 @@ interface AccordionProps {
   summary: string;
   details: string;
   id: string;
+  index: number;
 }
 
 
 const AccordionComponent = (props: AccordionProps) => {
-  const { summary, details, id } = props
+  const { summary, details, id,index } = props
 
   const jsxSummary = parse(summary)
   const jsxdetail = parse(details)
@@ -36,7 +37,7 @@ const AccordionComponent = (props: AccordionProps) => {
           expandIcon={<FcExpand />}
           sx={accordionSummary}
         >
-          <Typography sx={headerStyle}>{jsxSummary}</Typography>
+          <Typography sx={headerStyle}>{index}. {jsxSummary}</Typography>
 
         </AccordionSummary>
         <AccordionDetails>
