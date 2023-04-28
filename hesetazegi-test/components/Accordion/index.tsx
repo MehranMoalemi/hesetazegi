@@ -6,7 +6,7 @@ import {
 } from '@mui/material'
 import { useState } from 'react'
 import { FcExpand } from 'react-icons/Fc'
-
+import parse from 'html-react-parser'
 
 interface AccordionProps {
   summary: string;
@@ -16,7 +16,11 @@ interface AccordionProps {
 
 
 const AccordionComponent = (props: AccordionProps) => {
-  const { summary, details,id } = props
+  const { summary, details, id } = props
+  
+  const jsxSummary = parse(summary)
+  const jsxdetail = parse(details)
+
 
   const [expanded, setExpanded] = useState<string | false>(false)
 
@@ -34,11 +38,11 @@ const AccordionComponent = (props: AccordionProps) => {
           aria-controls={`acc${id} content`}
           id={`acc${id} header`}
           expandIcon={<FcExpand />}>
-          <Typography>{summary}</Typography>
+          <Typography>{jsxSummary}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           {details}
+           {jsxdetail}
           </Typography>
         </AccordionDetails>
       </Accordion>

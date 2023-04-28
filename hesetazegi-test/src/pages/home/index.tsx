@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <div className='homePage'>
-            <AccordionComponent summary={data?.data.content.items.title} details={data?.data.content.items.description} id={data?.data.content.items.import ReactDOM from 'react-dom'} />
+            <AccordionComponent summary={data?.data.content.items.title} details={data?.data.content.items.description} id={data?.data.content.items.id} />
         </div>
     )
 }
