@@ -4,7 +4,7 @@ import {
   AccordionDetails,
   Typography
 } from '@mui/material'
-import { FcExpand } from 'react-icons/fc'
+import { AiOutlineDown } from 'react-icons/ai'
 import parse from 'html-react-parser'
 import { accordionStyle, accordionSummary, descStyle, headerStyle } from '../accordionStyles';
 
@@ -34,7 +34,7 @@ const AccordionComponent = (props: AccordionProps) => {
         <AccordionSummary
           aria-controls={`acc${id} content`}
           id={`acc${id} header`}
-          expandIcon={<FcExpand />}
+          expandIcon={<AiOutlineDown style={{color:'#3A3A3A',fontSize:'16px'}}/>}
           sx={accordionSummary}
         >
           <Typography sx={headerStyle}>{index}. {jsxSummary}</Typography>
