@@ -15,7 +15,7 @@ interface AccordionProps {
 }
 
 
-export const AccordionComponent = (props: AccordionProps) => {
+const AccordionComponent = (props: AccordionProps) => {
   const { summary, details,id } = props
 
   const [expanded, setExpanded] = useState<string | false>(false)
@@ -45,3 +45,5 @@ export const AccordionComponent = (props: AccordionProps) => {
     </>
   )
 }
+
+export default AccordionComponent
