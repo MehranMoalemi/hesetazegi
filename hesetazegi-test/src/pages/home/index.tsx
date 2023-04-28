@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
 
         <div className='home'>
             {data?.data.content.items.map((item: ItemType) => (
-                <AccordionComponent summary={item.title} details={item.description} id={item.id} />
+                <AccordionComponent key={item.id} summary={item.title} details={item.description} id={item.id} />
             ))
             }
         </div>
