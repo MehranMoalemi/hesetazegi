@@ -22,18 +22,12 @@ const AccordionComponent = (props: AccordionProps) => {
   const jsxdetail = parse(details)
 
 
-  const [expanded, setExpanded] = useState<string | false>(false)
 
-  // this function will help us to only one accordion expand at the time
-  const handleChange = (isExpanded: boolean, panel: string) => {
-    setExpanded(isExpanded ? panel : false)
-  }
+ 
   return (
     <>
       <Accordion
-        expanded={expanded === `acc${id}`}
-        onChange={(event, isExpanded) => handleChange(isExpanded, `acc${id}`)}
-        sx={{ borderRadius: '8px',boxShadow: '0px 4px 16px rgba(137, 137, 137, 0.1)' }}
+        sx={{ borderRadius: '8px',boxShadow: '0px 4px 16px rgba(137, 137, 137, 0.1)',maxHeight:'100%' }}
       >
 
         <AccordionSummary
@@ -42,11 +36,11 @@ const AccordionComponent = (props: AccordionProps) => {
           expandIcon={<FcExpand />}
           sx={{ display: 'flex', flexDirection: 'row', direction: 'rtl',border:'0' }}
         >
-          <Typography sx={{ textAlign: 'right' }}>{jsxSummary}</Typography>
+          <Typography sx={{ textAlign: 'right',color:"#3A3A3A",fontWeight:'900' }}>{jsxSummary}</Typography>
 
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography sx={{ textAlign: 'right',color:"#656565",fontWeight:'400'}} >
             {jsxdetail}
           </Typography>
         </AccordionDetails>
