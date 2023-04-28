@@ -4,9 +4,9 @@ import {
   AccordionDetails,
   Typography
 } from '@mui/material'
-import { useState } from 'react'
 import { FcExpand } from 'react-icons/fc'
 import parse from 'html-react-parser'
+import { accordionStyle, accordionSummary, descStyle, headerStyle } from '../accordionStyles';
 
 interface AccordionProps {
   summary: string;
@@ -27,20 +27,20 @@ const AccordionComponent = (props: AccordionProps) => {
   return (
     <>
       <Accordion
-        sx={{ borderRadius: '8px',boxShadow: '0px 4px 16px rgba(137, 137, 137, 0.1)',maxHeight:'100%' }}
+        sx={accordionStyle}
       >
 
         <AccordionSummary
           aria-controls={`acc${id} content`}
           id={`acc${id} header`}
           expandIcon={<FcExpand />}
-          sx={{ display: 'flex', flexDirection: 'row', direction: 'rtl',border:'0' }}
+          sx={accordionSummary}
         >
-          <Typography sx={{ textAlign: 'right',color:"#3A3A3A",fontWeight:'900' }}>{jsxSummary}</Typography>
+          <Typography sx={headerStyle}>{jsxSummary}</Typography>
 
         </AccordionSummary>
         <AccordionDetails>
-          <Typography sx={{ textAlign: 'right',color:"#656565",fontWeight:'400'}} >
+          <Typography sx={descStyle} >
             {jsxdetail}
           </Typography>
         </AccordionDetails>
