@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
-import AccordionComponent from '../../../components/Accordion'
+import AccordionComponent from '../../components/AccordionComponent';
+import { ItemType } from '../../types/itemType';
 
 const Home = () => {
 
@@ -17,9 +18,9 @@ const Home = () => {
 
     return (
         <div className='homePage'>
-            {/* {data?.data.content.items.map(item => (
+            {data?.data.content.items.map((item:ItemType) => (
                 <AccordionComponent summary={item.title} details={item.description} id={item.id} />
-            ))} */}
+            ))}
         </div>
     )
 }

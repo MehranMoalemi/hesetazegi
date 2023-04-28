@@ -5,7 +5,7 @@ import {
   Typography
 } from '@mui/material'
 import { useState } from 'react'
-import { FcExpand } from 'react-icons/Fc'
+import { FcExpand } from 'react-icons/fc'
 import parse from 'html-react-parser'
 
 interface AccordionProps {
