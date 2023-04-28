@@ -17,7 +17,9 @@ const Home = () => {
 
     return (
         <div className='homePage'>
-            <AccordionComponent summary={data?.data.content.items.title} details={data?.data.content.items.description} id={data?.data.content.items.id} />
+            {/* {data?.data.content.items.map(item => (
+                <AccordionComponent summary={item.title} details={item.description} id={item.id} />
+            ))} */}
         </div>
     )
 }
