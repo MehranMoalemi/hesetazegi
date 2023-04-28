@@ -1,0 +1,9 @@
+.home{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        padding: 2rem;
+        background-color: #F5F5F5;
+}
